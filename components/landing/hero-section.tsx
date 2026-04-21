@@ -24,7 +24,15 @@ export function HeroSection({ heroStats, whatsappHref }: HeroSectionProps) {
                 Peças personalizadas, protótipos e soluções sob medida com alta qualidade.
               </p>
             </div>
-            <div className="flex w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-4">
+            <div className="flex w-full grid grid-cols-1 lg:grid-cols-3 items-center gap-4">
+            <a
+              href="https://vt.tiktok.com/ZS9dkTAXa/?page=TikTokShop"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-900 px-7 py-4 text-md font-medium text-white shadow-card transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white"
+            >
+              Ver catálogo
+            </a>
               <WhatsAppButton
                 href={whatsappHref}
                 showIcon={false}
@@ -34,7 +42,7 @@ export function HeroSection({ heroStats, whatsappHref }: HeroSectionProps) {
               </WhatsAppButton>
               <a
                 href="#como-funciona"
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-[linear-gradient(180deg,_rgba(255,255,255,0.96),_rgba(239,247,255,0.7))] px-7 py-4 text-md font-semibold text-slate-700 transition duration-300 hover:-translate-y-0.5 hover:border-slate-300"
+                className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-[linear-gradient(180deg,_rgba(255,255,255,0.96),_rgba(239,247,255,0.7))] px-7 py-4 text-md font-semibold text-slate-700 transition duration-300 hover:-translate-y-0.5 hover:border-slate-300"
               >
                 Ver como funciona
               </a>
