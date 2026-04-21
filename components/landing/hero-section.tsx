@@ -24,11 +24,11 @@ export function HeroSection({ heroStats, whatsappHref }: HeroSectionProps) {
                 Peças personalizadas, protótipos e soluções sob medida com alta qualidade.
               </p>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-4">
               <WhatsAppButton
                 href={whatsappHref}
                 showIcon={false}
-                className="bg-ink px-7 py-4 text-md bg-gradient-to-br from-blue-600 to-blue-900 font-semibold text-white hover:-translate-y-0.5 hover:bg-slate-800"
+                className="bg-ink px-7 py-4 text-md bg-gradient-to-br from-blue-600 to-blue-900 font-medium text-white hover:-translate-y-0.5 hover:bg-slate-800"
               >
                 Fazer encomenda
               </WhatsAppButton>
