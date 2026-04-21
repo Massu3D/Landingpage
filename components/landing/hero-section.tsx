@@ -14,7 +14,7 @@ export function HeroSection({ heroStats, whatsappHref }: HeroSectionProps) {
         <div className="flex flex-col items-center gap-12 text-center">
           <div className="animate-fadeUp flex w-full max-w-4xl flex-col items-center space-y-8">
             <span className="inline-flex rounded-full border border-black/20 bg-white/70 px-4 py-2 text-sm font-medium text-slate-600 shadow-card backdrop-blur">
-              Impressão 3D personalizada com atendimento rápido
+              Impressão 3D com atendimento rápido
             </span>
             <div className="flex flex-col items-center space-y-5">
               <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl lg:text-7xl">
