@@ -113,46 +113,29 @@ O projeto inclui dois workflows:
 
 - `.github/workflows/ci.yml`
   roda `npm run lint` e `npm run build`
-- `.github/workflows/vercel.yml`
-  cria deploy de preview em PRs e deploy de produção em `main`
 
-### Secrets necessários no GitHub
+### Deploy automático recomendado
 
-Configure estes secrets no repositório:
+Para este projeto, o fluxo recomendado é:
 
-- `VERCEL_TOKEN`
-- `VERCEL_ORG_ID`
-- `VERCEL_PROJECT_ID`
+- GitHub Actions apenas para CI
+- Vercel Git Integration para deploy automático
 
-### Como obter os dados da Vercel
+Assim você evita deploy duplicado, problemas de alias e inconsistências entre preview e produção.
 
-1. Instale a CLI:
+### Como configurar a Vercel corretamente
 
-```bash
-npm install --global vercel
-```
+1. Suba o projeto para o GitHub
+2. Na Vercel, clique em `Add New Project`
+3. Importe o repositório
+4. Confirme `main` como Production Branch
+5. Faça o deploy inicial
 
-2. Faça login:
+Depois disso:
 
-```bash
-vercel login
-```
+- cada push em branches secundárias cria um Preview Deployment
+- cada push/merge em `main` atualiza a produção automaticamente
 
-3. Linke o projeto local com a Vercel:
+### Observação
 
-```bash
-vercel link
-```
-
-4. Pegue os IDs no arquivo criado:
-
-- `.vercel/project.json`
-
-Campos esperados:
-
-- `projectId`
-- `orgId`
-
-### Importante
-
-Se você usar deploy pela Git integration da Vercel e também por GitHub Actions, poderá gerar deploy duplicado. Se quiser que apenas o GitHub Actions publique, desative o deploy automático por Git no painel da Vercel.
+Se você já configurou um workflow de deploy manual por GitHub Actions, remova ou desative esse fluxo para não disputar com a integração nativa da Vercel.
